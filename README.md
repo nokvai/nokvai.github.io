@@ -29,4 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Build to Production docs folder to github pages
-ng build --prod --output-path docs --base-href /<project_name>/
+ng build --prod --output-path docs --base-href /nokvai/
+
+ng build --base-href=/nokvai/
+
+ng build --base-href=/nokvai/ --prod --output-path docs --base-href /nokvai/
