@@ -5,12 +5,27 @@ export interface Project {
   language: string;
 }
 
-// Pulled from github.com/nokvai (public, non-fork repos). Descriptions are
-// inferred from repo names — edit freely to match what each project actually does.
+// Live production work — real clients, real users.
+export const featuredProjects: Project[] = [
+  {
+    name: 'Keylobby',
+    description: 'NZ key/lock booking platform — Angular 7 frontend on a .NET Core backend (API repo: Keylobby.API).',
+    url: 'https://keylobby.co.nz',
+    language: 'Angular · .NET Core',
+  },
+  {
+    name: 'WPF Unesco Philippines',
+    description: 'Website for UNESCO Philippines, built with Angular 7 and .NET Core.',
+    url: 'http://wpfunesco.org.ph',
+    language: 'Angular · .NET Core',
+  },
+];
+
+// Pulled from github.com/nokvai (public, non-fork repos).
 export const projects: Project[] = [
   {
     name: 'Keylobby.API',
-    description: 'C# Web API backend service for the Keylobby platform.',
+    description: 'C# / .NET Core backend API powering keylobby.co.nz.',
     url: 'https://github.com/nokvai/Keylobby.API',
     language: 'C#',
   },
@@ -52,7 +67,7 @@ export const projects: Project[] = [
   },
   {
     name: 'TheVoiceSoundsFamiliar',
-    description: 'Web project — The Voice Sounds Familiar.',
+    description: 'Android game, "The Voice Sounds Familiar" — thesis project (SKSU).',
     url: 'https://github.com/nokvai/TheVoiceSoundsFamiliar',
     language: 'HTML',
   },
@@ -68,4 +83,37 @@ export const projects: Project[] = [
     url: 'https://github.com/nokvai/autoupdatetest',
     language: 'JavaScript',
   },
+];
+
+// Earlier freelance, thesis and personal projects (undocumented on GitHub).
+export const otherProjects: string[] = [
+  'Payroll System — Sydney Hotel, General Santos City (VB.NET)',
+  'Payroll System — Saint Ann Security Agency (VB.NET)',
+  'Examination Software — GMT Marine Consultancy Agency (VB.NET)',
+  'Student Login Monitoring System with biometrics — NDDU',
+  'Water Billing System — thesis project, RMMC',
+  'LAN Chatbox System — ACLC College (C#.NET)',
+  'Door Lock Security System with RFID & face recognition — Rizal Microbank thesis project (C#.NET, Arduino)',
+  'Singkonet — Arduino, web & Android sales tracking — SKSU thesis project',
+  'Library RFID Book System — SKSU thesis project',
+  'Car Park System & plate number detector — ACLC thesis project',
+  'Home Automation System (alarm & light control) — ACLC thesis project',
+  'Petshop Reservation System — ACLC thesis project',
+  'Elementary School Grading System — ACLC thesis project',
+  'Chantara Emporium Pawnshop System — ACLC thesis project (ASP.NET)',
+  'Funeral Reservation System — ACLC thesis project',
+  'NokNokFileSystem — personal file-storage project (MS Access)',
+  'Overtime Calculator — Android, personal project',
+  'ACLC Enrolment System — thesis project',
+  'Kingle Agricultural Supply POS & Inventory — Digos',
+  'Home Motion Detection System with GSM alerts — USM thesis project (Arduino)',
+  'Bridge Water Level Monitor — USM thesis project',
+  'Enhanced Coffee Maker Dispenser, Bluetooth Android controlled — SKSU thesis project',
+  "MSARKYZIA agent keystroke tracker — used in a call center",
+  'Networked Document Tracking System — USM thesis project',
+  'Convention & Gymnasium Reservation Management System — ACLC thesis project',
+  'Employee Information System — personal project',
+  'Forest Lake Reservation System — ACLC thesis project',
+  'Student Information System — ACLC thesis project',
+  'Pisonet Time Idle desktop app — personal project',
 ];

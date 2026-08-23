@@ -2,6 +2,21 @@
   <p class="section-label">Projects</p>
   <h2 class="section-title">Things I've built</h2>
 
+  <h3 class="projects__subheading">Live production work</h3>
+  <div class="projects__grid">
+    @for (project of featuredProjects; track project.url) {
+      <a class="projects__card projects__card--featured" [href]="project.url" target="_blank" rel="noopener">
+        <div class="projects__card-head">
+          <h3>{{ project.name }}</h3>
+          <span class="projects__lang">{{ project.language }}</span>
+        </div>
+        <p>{{ project.description }}</p>
+        <span class="projects__link">Visit site →</span>
+      </a>
+    }
+  </div>
+
+  <h3 class="projects__subheading projects__subheading--spaced">From GitHub</h3>
   <div class="projects__grid">
     @for (project of projects; track project.url) {
       <a class="projects__card" [href]="project.url" target="_blank" rel="noopener">
@@ -18,4 +33,11 @@
   <a class="projects__more" href="https://github.com/nokvai?tab=repositories" target="_blank" rel="noopener">
     See all repositories on GitHub →
   </a>
+
+  <h3 class="projects__subheading projects__subheading--spaced">Other projects &amp; thesis work</h3>
+  <ul class="projects__other">
+    @for (item of otherProjects; track item) {
+      <li>{{ item }}</li>
+    }
+  </ul>
 </section>

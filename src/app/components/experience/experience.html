@@ -14,6 +14,13 @@
             }
           </div>
           <p class="experience__meta">{{ job.period }} · {{ job.duration }} · {{ job.location }}</p>
+          @if (job.highlights?.length) {
+            <ul class="experience__highlights">
+              @for (point of job.highlights; track point) {
+                <li>{{ point }}</li>
+              }
+            </ul>
+          }
           <div class="experience__skills">
             @for (skill of job.skills; track skill) {
               <span>{{ skill }}</span>

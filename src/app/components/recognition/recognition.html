@@ -1,0 +1,30 @@
+<section id="recognition" class="section recognition">
+  <p class="section-label">Recognition</p>
+  <h2 class="section-title">Awards &amp; certifications</h2>
+
+  <div class="recognition__columns">
+    <div class="recognition__column">
+      <h3>Awards</h3>
+      <ul>
+        @for (item of awards; track item.title) {
+          <li>
+            <span class="recognition__title">{{ item.title }}</span>
+            <span class="recognition__period">{{ item.period }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <div class="recognition__column">
+      <h3>Certifications</h3>
+      <ul>
+        @for (item of certifications; track item.title) {
+          <li>
+            <span class="recognition__title">{{ item.title }}</span>
+            <span class="recognition__period">{{ item.period }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>

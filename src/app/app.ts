@@ -6,11 +6,12 @@ import { Skills } from './components/skills/skills';
 import { Experience } from './components/experience/experience';
 import { Projects } from './components/projects/projects';
 import { Education } from './components/education/education';
+import { Recognition } from './components/recognition/recognition';
 import { Footer } from './components/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [Nav, Hero, About, Skills, Experience, Projects, Education, Footer],
+  imports: [Nav, Hero, About, Skills, Experience, Projects, Education, Recognition, Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
