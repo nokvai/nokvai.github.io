@@ -1,0 +1,26 @@
+<section id="experience" class="section experience">
+  <p class="section-label">Experience</p>
+  <h2 class="section-title">Where I've worked</h2>
+
+  <div class="experience__timeline">
+    @for (job of experience; track job.company + job.period) {
+      <div class="experience__item">
+        <div class="experience__marker" [class.experience__marker--current]="job.current"></div>
+        <div class="experience__content">
+          <div class="experience__heading">
+            <h3>{{ job.role }} · {{ job.company }}</h3>
+            @if (job.current) {
+              <span class="experience__badge">Current</span>
+            }
+          </div>
+          <p class="experience__meta">{{ job.period }} · {{ job.duration }} · {{ job.location }}</p>
+          <div class="experience__skills">
+            @for (skill of job.skills; track skill) {
+              <span>{{ skill }}</span>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

@@ -1,39 +1,31 @@
-# Nokvai
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 # nokvai.github.io
 
-# create new nokvai project with default style sass
-ng new nokvai --style=scss 
+Personal developer portfolio for Benjamin Eliseo III, built with [Angular](https://angular.dev) and deployed to [GitHub Pages](https://nokvai.github.io/).
 
-## Build to Production docs folder to github pages
+## Development
 
-ng build --prod --output-path docs --base-href /nokvai/
+```bash
+npm install
+npm start        # http://localhost:4200
+```
 
-ng build --base-href=/nokvai/
+## Build & deploy
 
-* ng build --base-href=/nokvai/ --prod --output-path docs --base-href /nokvai/
+GitHub Pages is configured to serve this repo's `master` branch from the `/docs` folder. The Angular build is configured (see `angular.json`) to output directly into `docs/` with `base-href: /`, so a plain build is all that's needed:
+
+```bash
+npm run build
+git add docs
+git commit -m "Deploy to GitHub Pages"
+git push
+```
+
+Or run both steps at once:
+
+```bash
+npm run deploy
+```
+
+## app-ads.txt
+
+[`app-ads.txt`](./app-ads.txt) lives at the project root (required by Google AdMob) and is copied into `docs/app-ads.txt` on every build, so it's served at `https://nokvai.github.io/app-ads.txt`. Edit the root file, not the one inside `docs/` — the latter is regenerated on every build.

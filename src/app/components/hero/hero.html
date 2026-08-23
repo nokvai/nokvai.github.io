@@ -1,0 +1,24 @@
+<section id="top" class="hero">
+  <div class="hero__glow"></div>
+
+  <div class="hero__avatar">{{ profile.initials }}</div>
+
+  <p class="hero__eyebrow">Hi, I'm</p>
+  <h1 class="hero__name">{{ profile.name }}</h1>
+  <h2 class="hero__title">{{ profile.title }}</h2>
+  <p class="hero__tagline">{{ profile.tagline }}</p>
+  <p class="hero__location">📍 {{ profile.location }}</p>
+
+  <div class="hero__actions">
+    <a href="#projects" class="btn btn--primary">View Projects</a>
+    <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+  </div>
+
+  <div class="hero__social">
+    @for (link of profile.social; track link.url) {
+      <a [href]="link.url" target="_blank" rel="noopener" [attr.aria-label]="link.label" class="hero__social-link">
+        {{ link.label }}
+      </a>
+    }
+  </div>
+</section>

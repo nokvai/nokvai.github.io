@@ -1,0 +1,23 @@
+<header class="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand">{{ profile.initials }}</a>
+
+    <nav class="nav__links" [class.nav__links--open]="open()">
+      @for (link of links; track link.href) {
+        <a [href]="link.href" (click)="close()">{{ link.label }}</a>
+      }
+    </nav>
+
+    <button
+      class="nav__toggle"
+      type="button"
+      (click)="toggle()"
+      [attr.aria-expanded]="open()"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>

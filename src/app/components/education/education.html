@@ -1,0 +1,14 @@
+<section id="education" class="section education">
+  <p class="section-label">Education</p>
+  <h2 class="section-title">Background</h2>
+
+  <div class="education__list">
+    @for (item of education; track item.school) {
+      <div class="education__item">
+        <h3>{{ item.degree }}</h3>
+        <p>{{ item.school }}</p>
+        <span>{{ item.period }}</span>
+      </div>
+    }
+  </div>
+</section>
