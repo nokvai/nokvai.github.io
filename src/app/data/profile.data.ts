@@ -7,7 +7,7 @@ export interface SocialLink {
 export const profile = {
   name: 'Benjamin Eliseo III',
   initials: 'BE',
-  title: 'Web Developer',
+  title: 'Senior Full-Stack Software Developer',
   tagline: 'Building web, desktop and mobile software for 10+ years.',
   location: 'Davao, Davao Region, Philippines',
   about: `Experienced software engineer with a demonstrated history of working in the computer industry.
