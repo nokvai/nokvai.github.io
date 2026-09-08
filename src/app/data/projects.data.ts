@@ -3,36 +3,75 @@ export interface Project {
   description: string;
   url?: string;
   language: string;
+  confidential?: boolean;
+  contributions?: string[];
 }
 
-export const projects: Project[] = [
+export const featuredProjects: Project[] = [
   {
-    name: 'WPF Unesco Philippines',
-    description: 'Website for UNESCO Philippines, built with Angular 7 and .NET Core.',
-    url: 'http://wpfunesco.org.ph',
-    language: 'Angular · .NET Core',
+    name: 'Bookort',
+    description:
+      'Sports court booking and operations platform for players, venue owners, coaches, clubs, and admins.',
+    url: 'https://bookort.com',
+    language: 'Node.js · Vue · Flutter · PHP',
+    confidential: true,
+    contributions: [
+      'Built the system across API, web, and mobile surfaces.',
+      'Node.js / Express / MySQL API for bookings, operations, and realtime events.',
+      'Vue + Capacitor web and Android client; Flutter mobile app.',
+      'PHP landing site and Super Admin console.',
+    ],
   },
   {
     name: 'Keylobby',
-    description: 'NZ key/lock booking platform — Angular 7 frontend on a .NET Core backend.',
+    description: 'NZ key and lock booking platform in production use.',
     url: 'https://keylobby.co.nz',
-    language: 'Angular · .NET Core',
+    language: 'Angular · .NET Core · C#',
+    contributions: [
+      'Built the Angular 7 frontend and the C# / .NET Core backend API.',
+      'Database-backed booking workflows on the .NET Core service.',
+      'Shipped and supported the live production site.',
+    ],
   },
   {
-    name: 'Bookort',
-    description: 'Full sports court booking & operations platform — players book courts and join Open Play; venue owners, coaches, clubs and admins get dedicated tooling. Multi-repo system: Node.js/Express/MySQL API, Vue + Capacitor web/Android client, Flutter mobile app, Super Admin console, and a PHP landing site.',
-    url: 'https://bookort.com',
-    language: 'Node.js · Vue · Flutter · PHP',
+    name: 'WPF Unesco Philippines',
+    description: 'Public website for UNESCO Philippines.',
+    url: 'http://wpfunesco.org.ph',
+    language: 'Angular · .NET Core',
+    contributions: [
+      'Built the Angular 7 frontend on a .NET Core backend.',
+      'Delivered a production public-facing site.',
+    ],
   },
+  {
+    name: 'Nazi POS',
+    description: 'Point-of-sale and inventory system with a multi-platform companion app.',
+    language: 'Laravel · PHP · Flutter · Dart',
+    confidential: true,
+    contributions: [
+      'Built the Laravel POS and inventory backend.',
+      'Built the Flutter companion app for Android, iOS, Windows, macOS, and Web.',
+    ],
+  },
+  {
+    name: 'Weneg',
+    description:
+      'Drag-and-drop workflow automation website built at Vizwoz Software Development Systems Inc.',
+    language: 'AngularJS · .NET Core · MSSQL · Document DB',
+    confidential: true,
+    contributions: [
+      'Built the AngularJS frontend and C# / .NET Core backend.',
+      'Used MSSQL and Document DB for workflow data.',
+      'Implemented microservice-based workflow automation.',
+    ],
+  },
+];
+
+export const projects: Project[] = [
   {
     name: 'TheVoiceSoundsFamiliar',
     description: 'Android game, "The Voice Sounds Familiar" — thesis project (SKSU).',
     language: 'HTML',
-  },
-  {
-    name: 'Keylobby.API',
-    description: 'C# / .NET Core backend API powering keylobby.co.nz.',
-    language: 'C#',
   },
   {
     name: 'partbnb-template-email',
@@ -43,16 +82,19 @@ export const projects: Project[] = [
     name: 'mantis',
     description: 'Issue / bug-tracking system for Monster VoIP.',
     language: 'PHP',
+    confidential: true,
   },
   {
     name: 'onboarding-monstervoip',
     description: 'Customer onboarding site built during time at Monster VoIP.',
     language: 'HTML',
+    confidential: true,
   },
   {
     name: 'monstervoipproxyapi',
     description: 'Proxy API built during time at Monster VoIP.',
     language: 'JavaScript',
+    confidential: true,
   },
   {
     name: 'sipalgdetector',
@@ -83,45 +125,40 @@ export const projects: Project[] = [
     name: 'carlitospos',
     description: 'Backend point-of-sale system for Carlitos Restaurant.',
     language: 'VB.NET',
+    confidential: true,
   },
   {
     name: 'carlitoshotel',
     description: 'Laravel hotel management system.',
     language: 'Laravel · PHP',
-  },
-  {
-    name: 'naziposapp',
-    description: 'Flutter point-of-sale & inventory companion app — Android, iOS, Windows, macOS and Web — syncing with nazipos.com.',
-    language: 'Flutter · Dart',
-  },
-  {
-    name: 'nazipos',
-    description: 'Laravel point-of-sale & inventory system backend.',
-    language: 'Laravel · PHP',
+    confidential: true,
   },
   {
     name: 'metal-profiler',
     description: 'Flutter app for the metal music community — profiles, music links, verification and social.',
     language: 'Flutter · Dart',
+    confidential: true,
   },
   {
     name: 'petworld_society',
     description: 'Flutter app for the Petworld Society community.',
     language: 'Flutter · Dart',
+    confidential: true,
   },
   {
     name: 'neon_munch',
     description: 'Flutter mobile app.',
     language: 'Flutter · Dart',
+    confidential: true,
   },
   {
     name: 'biofreedtr',
     description: 'Bio Free DTR — Flutter employee attendance app with a Google Apps Script + Google Sheets backend.',
     language: 'Flutter · Dart',
+    confidential: true,
   },
 ];
 
-// Earlier freelance, thesis and personal projects.
 export const otherProjects: string[] = [
   'NokNokFileSystem — personal file-storage project (MS Access)',
   'Home Motion Detection System with GSM alerts — USM thesis project (Arduino)',

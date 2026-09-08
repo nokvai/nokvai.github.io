@@ -27,6 +27,15 @@
     }
   }
 
+  &__company {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    margin-bottom: 0.35rem;
+  }
+
   &__heading {
     display: flex;
     align-items: center;
@@ -56,8 +65,23 @@
     font-size: 0.88rem;
   }
 
+  &__summary {
+    margin-top: 0.7rem;
+    color: var(--text);
+    font-size: 0.95rem;
+  }
+
+  &__contrib {
+    margin-top: 0.9rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
   &__highlights {
-    margin: 0.85rem 0 0;
+    margin: 0.45rem 0 0;
     padding-left: 1.1rem;
     display: flex;
     flex-direction: column;

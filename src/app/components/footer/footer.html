@@ -2,11 +2,16 @@
   <p class="section-label">Contact</p>
   <h2 class="section-title">Let's work together</h2>
   <p class="contact__text">
-    Open to new opportunities and interesting projects. The fastest way to reach me is on LinkedIn or GitHub.
+    Open to new opportunities and interesting projects. Reach me by email, LinkedIn, or GitHub.
   </p>
   <div class="contact__actions">
     @for (link of profile.social; track link.url) {
-      <a [href]="link.url" target="_blank" rel="noopener" class="btn btn--ghost">{{ link.label }}</a>
+      <a
+        [href]="link.url"
+        [attr.target]="link.icon === 'email' ? null : '_blank'"
+        rel="noopener"
+        class="btn btn--ghost"
+      >{{ link.label }}</a>
     }
   </div>
 </section>

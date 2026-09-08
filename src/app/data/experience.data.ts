@@ -5,6 +5,7 @@ export interface Experience {
   period: string;
   duration: string;
   location: string;
+  summary: string;
   skills: string[];
   highlights?: string[];
   current?: boolean;
@@ -17,6 +18,8 @@ export const experience: Experience[] = [
     period: 'Jul 2024 — Jul 2026',
     duration: '2 yrs',
     location: 'Remote',
+    summary:
+      'Developed and maintained backend services and frontend features for production business applications.',
     skills: ['Node.js', 'Express.js', 'TypeScript', 'React.js', 'MongoDB Atlas', 'AWS Lambda', 'Elasticsearch', 'Kibana'],
     highlights: [
       'Developed backend services using Node.js, Express.js, and TypeScript.',
@@ -33,6 +36,8 @@ export const experience: Experience[] = [
     period: 'Jan 2022 — Jul 2024',
     duration: '2 yrs 7 mos',
     location: 'Remote',
+    summary:
+      'Owned full-stack internal business applications with an Angular frontend and a C# / .NET Core backend on SQL Server.',
     skills: ['C#', '.NET Core', 'Microsoft SQL Server', 'Angular', 'RxJS', 'Python', 'OpenAI API'],
     highlights: [
       'Built full-stack internal web apps with an Angular frontend and a C# / .NET Core backend.',
@@ -48,6 +53,8 @@ export const experience: Experience[] = [
     period: 'Aug 2019 — Aug 2022',
     duration: '3 yrs 1 mo',
     location: 'Los Angeles, CA (Remote)',
+    summary:
+      'Built client-facing websites, Laravel/PHP applications, and a cross-platform desktop app for production VoIP workflows.',
     skills: ['Vue.js', 'Laravel', 'WordPress', 'Electron'],
     highlights: [
       'Designed and built WordPress sites for clients.',
@@ -64,6 +71,8 @@ export const experience: Experience[] = [
     period: 'Jan 2019 — Jun 2019',
     duration: '6 mos',
     location: 'Metro Davao, Philippines',
+    summary:
+      'Built website UIs and full-stack features on Angular with a .NET Core backend.',
     skills: ['AngularJS', 'JavaScript', 'C#', '.NET Core'],
     highlights: [
       'Built website UIs and coordinated directly with clients.',
@@ -77,6 +86,8 @@ export const experience: Experience[] = [
     period: 'Jun 2014 — Oct 2018',
     duration: '4 yrs 5 mos',
     location: 'Philippines',
+    summary:
+      'Developed C# / .NET Core business systems, workflow tooling, and Microsoft platform integrations for production use.',
     skills: ['C#', '.NET Core', 'AngularJS', 'MSSQL', 'Document DB', 'ASP.NET MVC', 'Microsoft Dynamics', 'SCSM'],
     highlights: [
       'Built Weneg, a drag-and-drop website for automating workflows with microservices — AngularJS frontend, .NET Core backend, MSSQL and Document DB.',
@@ -94,6 +105,8 @@ export const experience: Experience[] = [
     period: '2013 — 2014',
     duration: '1 yr',
     location: 'Philippines',
+    summary:
+      'Handled IT operations, networking, and database administration, including internal software for the call center.',
     skills: ['Networking', 'Database Admin'],
     highlights: [
       'Started as sales agent / PC troubleshooter; promoted to IT Head — computer technician, network admin and database admin.',

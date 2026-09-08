@@ -3,29 +3,49 @@ export interface SkillGroup {
   items: string[];
 }
 
+export interface FocusArea {
+  title: string;
+  items: string[];
+}
+
 export const skills: SkillGroup[] = [
   {
-    category: 'Languages',
-    items: ['C#', 'Dart', 'TypeScript', 'JavaScript', 'Python', 'PHP', 'VB.NET', 'VBScript', 'Java', 'C', 'C++'],
-  },
-  {
-    category: 'Backend & Frameworks',
-    items: ['.NET Core', 'ASP.NET Core', 'ASP.NET MVC', 'MVVM', 'Node.js', 'Express.js', 'Socket.IO', 'Laravel', 'WPF / XAML', 'Windows Forms', 'Electron'],
-  },
-  {
-    category: 'Databases & CMS',
-    items: ['MSSQL / T-SQL', 'Document DB', 'Upstash (Redis)', 'MongoDB Atlas', 'MySQL', 'PostgreSQL', 'MS Access', 'WordPress', 'Joomla', 'XAMPP'],
+    category: 'Backend & APIs',
+    items: ['C# / .NET Core', 'ASP.NET MVC', 'Node.js', 'Express.js', 'REST APIs', 'Third-party integrations'],
   },
   {
     category: 'Frontend',
-    items: ['Angular', 'Vue.js', 'React.js', 'AngularJS', 'RxJS', 'Capacitor', 'Ionic', 'HTML5', 'CSS3', 'Sass', 'Less', 'Bootstrap', 'jQuery'],
+    items: ['Angular', 'React', 'Vue.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3'],
   },
   {
-    category: 'Cloud & Enterprise',
-    items: ['Microsoft Dynamics 365', 'Dynamics Portal 365', 'Azure Bot Framework', 'System Center Service Manager (SCSM)', 'AWS Lambda', 'Elasticsearch', 'Kibana'],
+    category: 'Databases',
+    items: ['SQL Server', 'MySQL', 'MongoDB Atlas', 'Document DB'],
   },
   {
-    category: 'Hardware, Mobile & Tools',
-    items: ['Flutter', 'Capacitor', 'Android', 'libGDX', 'Arduino', 'Circuit Design', 'Electronics', 'Networking & Cabling', 'Windows Server', 'Git', 'Sentry.io', 'Linux Shell Scripting'],
+    category: 'Tools & Delivery',
+    items: ['Git / GitHub', 'Automated deployments', 'AWS Lambda', 'Elasticsearch', 'Flutter'],
+  },
+];
+
+export const focusAreas: FocusArea[] = [
+  {
+    title: 'Backend Development',
+    items: ['C# / .NET Core', 'Node.js', 'API development'],
+  },
+  {
+    title: 'Web APIs & Integrations',
+    items: ['RESTful APIs', 'HubSpot, Slack, Zoom', 'OpenAI API'],
+  },
+  {
+    title: 'Databases',
+    items: ['SQL Server', 'MySQL', 'MongoDB'],
+  },
+  {
+    title: 'Frontend Development',
+    items: ['Angular', 'React', 'JavaScript / TypeScript'],
+  },
+  {
+    title: 'Software Delivery',
+    items: ['Git', 'Deployment automation', 'Production application support'],
   },
 ];

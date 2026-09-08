@@ -64,9 +64,17 @@
 
   &__tagline {
     margin-top: 1.1rem;
-    max-width: 34rem;
+    max-width: 38rem;
     color: var(--text-muted);
     font-size: 1.05rem;
+  }
+
+  &__tech {
+    margin-top: 1rem;
+    color: var(--accent-2);
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
   }
 
   &__location {

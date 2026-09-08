@@ -1,8 +1,9 @@
 .about {
   &__text {
-    max-width: 42rem;
+    max-width: 44rem;
     color: var(--text-muted);
     font-size: 1.05rem;
     white-space: pre-line;
+    line-height: 1.7;
   }
 }

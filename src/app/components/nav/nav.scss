@@ -30,7 +30,7 @@
 
   &__links {
     display: flex;
-    gap: 2rem;
+    gap: 1.35rem;
 
     a {
       font-size: 0.9rem;
@@ -62,7 +62,7 @@
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .nav {
     &__toggle {
       display: flex;
@@ -87,7 +87,7 @@
       }
 
       &--open {
-        max-height: 20rem;
+        max-height: 28rem;
       }
     }
   }

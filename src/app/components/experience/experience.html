@@ -7,14 +7,17 @@
       <div class="experience__item">
         <div class="experience__marker" [class.experience__marker--current]="job.current"></div>
         <div class="experience__content">
+          <p class="experience__company">{{ job.company }}</p>
           <div class="experience__heading">
-            <h3>{{ job.role }} · {{ job.company }}</h3>
+            <h3>{{ job.role }}</h3>
             @if (job.current) {
               <span class="experience__badge">Current</span>
             }
           </div>
           <p class="experience__meta">{{ job.period }} · {{ job.duration }} · {{ job.location }}</p>
+          <p class="experience__summary">{{ job.summary }}</p>
           @if (job.highlights?.length) {
+            <p class="experience__contrib">Key contributions</p>
             <ul class="experience__highlights">
               @for (point of job.highlights; track point) {
                 <li>{{ point }}</li>

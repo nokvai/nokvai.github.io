@@ -1,4 +1,24 @@
 .projects {
+  &__notice {
+    margin: -0.5rem 0 2.5rem;
+    padding: 1.25rem 1.4rem;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-left: 3px solid var(--accent-2);
+    border-radius: 0.85rem;
+
+    h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  }
+
   &__subheading {
     font-size: 0.95rem;
     font-weight: 600;
@@ -7,6 +27,16 @@
 
     &--spaced {
       margin-top: 3rem;
+    }
+  }
+
+  &__featured {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+
+    @media (min-width: 720px) {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -24,17 +54,14 @@
     border: 1px solid var(--surface-border);
     border-radius: 1rem;
     padding: 1.5rem;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-
-    &--link:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent);
-    }
 
     p {
       color: var(--text-muted);
       font-size: 0.92rem;
-      flex: 1;
+    }
+
+    &--featured {
+      border-color: rgba(124, 111, 242, 0.28);
     }
   }
 
@@ -59,24 +86,51 @@
     border: 1px solid var(--accent-2);
     border-radius: 999px;
     padding: 0.15rem 0.6rem;
+    text-align: right;
+    max-width: 11rem;
+  }
+
+  &__confidential {
+    align-self: flex-start;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--text-muted);
+    border: 1px solid var(--surface-border);
+    border-radius: 999px;
+    padding: 0.2rem 0.65rem;
+  }
+
+  &__contrib-label {
+    margin-top: 0.25rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+
+  &__contrib {
+    margin: 0;
+    padding-left: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    li {
+      color: var(--text-muted);
+      font-size: 0.86rem;
+    }
   }
 
   &__link {
+    margin-top: auto;
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--accent-2);
-  }
-
-  &__more {
-    display: inline-block;
-    margin-top: 2rem;
-    font-size: 0.92rem;
-    font-weight: 600;
-    color: var(--text-muted);
-    transition: color 0.2s ease;
 
     &:hover {
-      color: var(--accent-2);
+      text-decoration: underline;
     }
   }
 

@@ -7,6 +7,7 @@
   <h1 class="hero__name">{{ profile.name }}</h1>
   <h2 class="hero__title">{{ profile.title }}</h2>
   <p class="hero__tagline">{{ profile.tagline }}</p>
+  <p class="hero__tech">{{ profile.techLine.join(' • ') }}</p>
   <p class="hero__location">📍 {{ profile.location }}</p>
 
   <div class="hero__actions">
@@ -16,7 +17,13 @@
 
   <div class="hero__social">
     @for (link of profile.social; track link.url) {
-      <a [href]="link.url" target="_blank" rel="noopener" [attr.aria-label]="link.label" class="hero__social-link">
+      <a
+        [href]="link.url"
+        [attr.target]="link.icon === 'email' ? null : '_blank'"
+        rel="noopener"
+        [attr.aria-label]="link.label"
+        class="hero__social-link"
+      >
         {{ link.label }}
       </a>
     }

@@ -1,9 +1,9 @@
 <section id="education" class="section education">
-  <p class="section-label">Education</p>
-  <h2 class="section-title">Background</h2>
+  <p class="section-label">Background</p>
+  <h2 class="section-title">Education &amp; Professional Background</h2>
 
   <div class="education__list">
-    @for (item of education; track item.school) {
+    @for (item of education; track item.degree + item.school) {
       <div class="education__item">
         <h3>{{ item.degree }}</h3>
         <p>{{ item.school }}</p>

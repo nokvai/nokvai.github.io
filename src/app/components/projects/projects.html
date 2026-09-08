@@ -2,27 +2,59 @@
   <p class="section-label">Projects</p>
   <h2 class="section-title">Things I've built</h2>
 
-  <h3 class="projects__subheading">Selected projects</h3>
+  <aside class="projects__notice">
+    <h3>Professional Work &amp; Confidentiality</h3>
+    <p>
+      Some projects presented in this portfolio were developed for private companies and contain
+      proprietary source code and confidential business information. For confidentiality reasons,
+      I cannot publicly share complete source code or internal company assets. Project descriptions
+      focus on my responsibilities, technical contributions, and the technologies used.
+    </p>
+  </aside>
+
+  <h3 class="projects__subheading">Featured projects</h3>
+  <div class="projects__featured">
+    @for (project of featuredProjects; track project.name) {
+      <article class="projects__card projects__card--featured">
+        <div class="projects__card-head">
+          <h3>{{ project.name }}</h3>
+          <span class="projects__lang">{{ project.language }}</span>
+        </div>
+        @if (project.confidential) {
+          <span class="projects__confidential">Professional Project — Source Code Confidential</span>
+        }
+        <p>{{ project.description }}</p>
+        @if (project.contributions?.length) {
+          <p class="projects__contrib-label">My contribution</p>
+          <ul class="projects__contrib">
+            @for (item of project.contributions; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        }
+        @if (project.url) {
+          <a class="projects__link" [href]="project.url" target="_blank" rel="noopener">Visit site →</a>
+        }
+      </article>
+    }
+  </div>
+
+  <h3 class="projects__subheading projects__subheading--spaced">Additional projects</h3>
   <div class="projects__grid">
     @for (project of projects; track project.name) {
-      @if (project.url) {
-        <a class="projects__card projects__card--link" [href]="project.url" target="_blank" rel="noopener">
-          <div class="projects__card-head">
-            <h3>{{ project.name }}</h3>
-            <span class="projects__lang">{{ project.language }}</span>
-          </div>
-          <p>{{ project.description }}</p>
-          <span class="projects__link">Visit site →</span>
-        </a>
-      } @else {
-        <div class="projects__card">
-          <div class="projects__card-head">
-            <h3>{{ project.name }}</h3>
-            <span class="projects__lang">{{ project.language }}</span>
-          </div>
-          <p>{{ project.description }}</p>
+      <div class="projects__card">
+        <div class="projects__card-head">
+          <h3>{{ project.name }}</h3>
+          <span class="projects__lang">{{ project.language }}</span>
         </div>
-      }
+        @if (project.confidential) {
+          <span class="projects__confidential">Professional Project — Source Code Confidential</span>
+        }
+        <p>{{ project.description }}</p>
+        @if (project.url) {
+          <a class="projects__link" [href]="project.url" target="_blank" rel="noopener">Visit site →</a>
+        }
+      </div>
     }
   </div>
 

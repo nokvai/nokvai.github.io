@@ -11,11 +11,12 @@ export class Nav {
   protected readonly open = signal(false);
 
   protected readonly links = [
+    { label: 'Home', href: '#top' },
     { label: 'About', href: '#about' },
     { label: 'Skills', href: '#skills' },
     { label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
-    { label: 'Education', href: '#education' },
+    { label: 'Background', href: '#education' },
     { label: 'Contact', href: '#contact' },
   ];
 

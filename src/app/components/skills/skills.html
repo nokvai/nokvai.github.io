@@ -14,4 +14,18 @@
       </div>
     }
   </div>
+
+  <h3 class="skills__focus-title">Relevant Full-Stack Experience</h3>
+  <div class="skills__focus">
+    @for (area of focusAreas; track area.title) {
+      <div class="skills__focus-card">
+        <h4>{{ area.title }}</h4>
+        <ul>
+          @for (item of area.items; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+      </div>
+    }
+  </div>
 </section>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { skills } from '../../data/skills.data';
+import { focusAreas, skills } from '../../data/skills.data';
 
 @Component({
   selector: 'app-skills',
@@ -8,4 +8,5 @@ import { skills } from '../../data/skills.data';
 })
 export class Skills {
   protected readonly skills = skills;
+  protected readonly focusAreas = focusAreas;
 }
