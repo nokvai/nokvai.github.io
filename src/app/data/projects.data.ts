@@ -1,12 +1,11 @@
 export interface Project {
   name: string;
   description: string;
-  url: string;
+  url?: string;
   language: string;
 }
 
-// Live production work — real clients, real users.
-export const featuredProjects: Project[] = [
+export const projects: Project[] = [
   {
     name: 'WPF Unesco Philippines',
     description: 'Website for UNESCO Philippines, built with Angular 7 and .NET Core.',
@@ -15,137 +14,114 @@ export const featuredProjects: Project[] = [
   },
   {
     name: 'Keylobby',
-    description: 'NZ key/lock booking platform — Angular 7 frontend on a .NET Core backend (API repo: Keylobby.API).',
+    description: 'NZ key/lock booking platform — Angular 7 frontend on a .NET Core backend.',
     url: 'https://keylobby.co.nz',
     language: 'Angular · .NET Core',
   },
   {
     name: 'Bookort',
     description: 'Full sports court booking & operations platform — players book courts and join Open Play; venue owners, coaches, clubs and admins get dedicated tooling. Multi-repo system: Node.js/Express/MySQL API, Vue + Capacitor web/Android client, Flutter mobile app, Super Admin console, and a PHP landing site.',
-    url: 'https://github.com/Creatizan/bookort-web-app',
+    url: 'https://bookort.com',
     language: 'Node.js · Vue · Flutter · PHP',
   },
-];
-
-// Pulled from github.com/nokvai (public and private, non-fork repos).
-export const projects: Project[] = [
   {
     name: 'TheVoiceSoundsFamiliar',
     description: 'Android game, "The Voice Sounds Familiar" — thesis project (SKSU).',
-    url: 'https://github.com/nokvai/TheVoiceSoundsFamiliar',
     language: 'HTML',
   },
   {
     name: 'Keylobby.API',
     description: 'C# / .NET Core backend API powering keylobby.co.nz.',
-    url: 'https://github.com/nokvai/Keylobby.API',
     language: 'C#',
   },
   {
     name: 'partbnb-template-email',
     description: 'HTML email templates for PartBnB.',
-    url: 'https://github.com/nokvai/partbnb-template-email',
     language: 'HTML',
   },
   {
     name: 'mantis',
     description: 'Issue / bug-tracking system for Monster VoIP.',
-    url: 'https://github.com/nokvai/mantis',
     language: 'PHP',
   },
   {
     name: 'onboarding-monstervoip',
     description: 'Customer onboarding site built during time at Monster VoIP.',
-    url: 'https://github.com/nokvai/onboarding-monstervoip',
     language: 'HTML',
   },
   {
     name: 'monstervoipproxyapi',
     description: 'Proxy API built during time at Monster VoIP.',
-    url: 'https://github.com/nokvai/monstervoipproxyapi',
     language: 'JavaScript',
   },
   {
     name: 'sipalgdetector',
     description: 'JavaScript tool to detect SIP ALG interference on VoIP connections.',
-    url: 'https://github.com/nokvai/sipalgdetector',
     language: 'JavaScript',
   },
   {
     name: 'deskphoneapp',
     description: 'Desk phone / softphone web application.',
-    url: 'https://github.com/nokvai/deskphoneapp',
     language: 'JavaScript',
   },
   {
     name: 'autoupdatetest',
     description: 'Sandbox project testing auto-update functionality.',
-    url: 'https://github.com/nokvai/autoupdatetest',
     language: 'JavaScript',
   },
   {
     name: 'letsgetvirtualassistant',
     description: 'Marketing site for a virtual assistant service.',
-    url: 'https://github.com/nokvai/letsgetvirtualassistant',
     language: 'CSS',
   },
   {
     name: 'carlitosrestaurantnode',
     description: 'Node.js powered website for Carlitos Restaurant.',
-    url: 'https://github.com/nokvai/carlitosrestaurantnode',
     language: 'HTML',
   },
   {
     name: 'carlitospos',
     description: 'Backend point-of-sale system for Carlitos Restaurant.',
-    url: 'https://github.com/nokvai/carlitospos',
     language: 'VB.NET',
   },
   {
     name: 'carlitoshotel',
     description: 'Laravel hotel management system.',
-    url: 'https://github.com/nokvai/carlitoshotel',
     language: 'Laravel · PHP',
   },
   {
     name: 'naziposapp',
     description: 'Flutter point-of-sale & inventory companion app — Android, iOS, Windows, macOS and Web — syncing with nazipos.com.',
-    url: 'https://github.com/nokvai/naziposapp',
     language: 'Flutter · Dart',
   },
   {
     name: 'nazipos',
     description: 'Laravel point-of-sale & inventory system backend.',
-    url: 'https://github.com/nokvai/nazipos',
     language: 'Laravel · PHP',
   },
   {
     name: 'metal-profiler',
     description: 'Flutter app for the metal music community — profiles, music links, verification and social.',
-    url: 'https://github.com/nokvai/metal-profiler',
     language: 'Flutter · Dart',
   },
   {
     name: 'petworld_society',
     description: 'Flutter app for the Petworld Society community.',
-    url: 'https://github.com/nokvai/petworld_society',
     language: 'Flutter · Dart',
   },
   {
     name: 'neon_munch',
     description: 'Flutter mobile app.',
-    url: 'https://github.com/nokvai/neon_munch',
     language: 'Flutter · Dart',
   },
   {
     name: 'biofreedtr',
     description: 'Bio Free DTR — Flutter employee attendance app with a Google Apps Script + Google Sheets backend.',
-    url: 'https://github.com/nokvai/biofreedtr',
     language: 'Flutter · Dart',
   },
 ];
 
-// Earlier freelance, thesis and personal projects (undocumented on GitHub).
+// Earlier freelance, thesis and personal projects.
 export const otherProjects: string[] = [
   'NokNokFileSystem — personal file-storage project (MS Access)',
   'Home Motion Detection System with GSM alerts — USM thesis project (Arduino)',

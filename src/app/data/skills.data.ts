@@ -6,26 +6,26 @@ export interface SkillGroup {
 export const skills: SkillGroup[] = [
   {
     category: 'Languages',
-    items: ['C', 'C++', 'C#', 'Java', 'PHP', 'TypeScript', 'JavaScript', 'VB.NET', 'VBScript'],
-  },
-  {
-    category: 'Frontend',
-    items: ['Angular', 'AngularJS', 'React.js', 'Vue.js', 'Ionic', 'RxJS', 'HTML5', 'CSS3', 'Sass', 'Less', 'Bootstrap', 'jQuery'],
+    items: ['C#', 'Dart', 'TypeScript', 'JavaScript', 'Python', 'PHP', 'VB.NET', 'VBScript', 'Java', 'C', 'C++'],
   },
   {
     category: 'Backend & Frameworks',
-    items: ['Node.js', 'ASP.NET MVC', '.NET Core', 'MVVM', 'Laravel', 'WPF / XAML', 'Windows Forms', 'Electron'],
+    items: ['.NET Core', 'ASP.NET Core', 'ASP.NET MVC', 'MVVM', 'Node.js', 'Express.js', 'Socket.IO', 'Laravel', 'WPF / XAML', 'Windows Forms', 'Electron'],
   },
   {
     category: 'Databases & CMS',
-    items: ['MSSQL / T-SQL', 'MySQL', 'PostgreSQL', 'MS Access', 'WordPress', 'Joomla', 'XAMPP'],
+    items: ['MSSQL / T-SQL', 'Document DB', 'Upstash (Redis)', 'MongoDB Atlas', 'MySQL', 'PostgreSQL', 'MS Access', 'WordPress', 'Joomla', 'XAMPP'],
+  },
+  {
+    category: 'Frontend',
+    items: ['Angular', 'Vue.js', 'React.js', 'AngularJS', 'RxJS', 'Capacitor', 'Ionic', 'HTML5', 'CSS3', 'Sass', 'Less', 'Bootstrap', 'jQuery'],
   },
   {
     category: 'Cloud & Enterprise',
-    items: ['Microsoft Dynamics 365', 'Dynamics Portal 365', 'Azure Bot Framework', 'System Center Service Manager (SCSM)'],
+    items: ['Microsoft Dynamics 365', 'Dynamics Portal 365', 'Azure Bot Framework', 'System Center Service Manager (SCSM)', 'AWS Lambda', 'Elasticsearch', 'Kibana'],
   },
   {
     category: 'Hardware, Mobile & Tools',
-    items: ['Android', 'libGDX', 'Arduino', 'Circuit Design', 'Electronics', 'Networking & Cabling', 'Windows Server', 'Git', 'Sentry.io', 'Linux Shell Scripting'],
+    items: ['Flutter', 'Capacitor', 'Android', 'libGDX', 'Arduino', 'Circuit Design', 'Electronics', 'Networking & Cabling', 'Windows Server', 'Git', 'Sentry.io', 'Linux Shell Scripting'],
   },
 ];

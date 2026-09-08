@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { featuredProjects, projects, otherProjects } from '../../data/projects.data';
+import { projects, otherProjects } from '../../data/projects.data';
 
 @Component({
   selector: 'app-projects',
@@ -7,7 +7,6 @@ import { featuredProjects, projects, otherProjects } from '../../data/projects.d
   styleUrl: './projects.scss',
 })
 export class Projects {
-  protected readonly featuredProjects = featuredProjects;
   protected readonly projects = projects;
   protected readonly otherProjects = otherProjects;
 }
