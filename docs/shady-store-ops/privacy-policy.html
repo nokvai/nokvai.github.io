@@ -43,16 +43,18 @@
   <h3>Owner account</h3>
   <p>When you create a store, the App asks for an owner username, email address, and password. The password is stored as a hash on the device. The email and password are also kept so the App can register optional cloud access later.</p>
   <h3>Optional cloud sync</h3>
-  <p>Online access is off until a super admin turns it on. When it is on, the App can send the store's sales data and account details to our Supabase project so the same shop can be used from more than one device. Until then, selling stays on the device and is not uploaded.</p>
+  <p>Online access is off until a super admin turns it on. When it is on, the App sends the store's sales data and account details to our Supabase project while the device is online, so the same shop stays current on more than one device without a separate sync step. While the device is offline, sales stay on the device.</p>
+  <p>A super admin can turn the whole store off, or turn off Sale, Products, Categories, Stock, Sales, Reports, Staff, or Settings one section at a time. A device that is online loses those sections immediately. Home stays open and says the store is turned off when the whole store is off. A device that is offline keeps the last known access, including selling, until it connects again. Turning online data back on restores the saved sections.</p>
   <h3>Advertising</h3>
-  <p>The App shows banner ads through Google AdMob on phones and tablets. The register screen does not show ads. AdMob may use an advertising identifier and technical device data to serve and measure ads, under Google's own policies.</p>
+  <p>On Android, the App shows one banner ad through Google AdMob at the top of each screen, including the register, sign-in, and setup. Windows does not show ads. AdMob may use an advertising identifier and technical device data to serve and measure ads, under Google's own policies.</p>
   <p>We do not sell your personal information or your sales data.</p>
 
   <h2>2. How We Use Information</h2>
   <ul>
     <li>Run the register, products, stock, sales history, and staff sign-in on the device</li>
     <li>Remember the owner email and password so optional cloud sync can be turned on later</li>
-    <li>Sync store data to Supabase only when online access is on</li>
+    <li>Sync store data to Supabase while the device is online and online access is on</li>
+    <li>Apply a super admin's store or section change as soon as the device is online</li>
     <li>Show ads through Google AdMob</li>
     <li>Respond to support requests</li>
   </ul>
@@ -64,12 +66,13 @@
 
   <h2>4. Retention and account deletion</h2>
   <p>On-device data remains until you delete the account, clear the App's storage, or uninstall the App. Cloud data, when the store is registered online, remains until the account is deleted.</p>
-  <p>The store owner can delete the account in the App under Settings → Delete account. That removes the owner login, staff logins, store profile, products, stock, sales, and settings on that device, and the online copy when one exists. Deletion in the App is immediate.</p>
+  <p>The store owner can delete the account in the App under Settings → Delete account. That removes the owner login, staff logins, store profile, products, stock, sales, and settings on this device immediately. The online copy is removed as soon as a device is online. Another device that still has the store erases its copy the next time it connects. A new setup may show the built-in starter catalog. That catalog is not the deleted store.</p>
   <p>You can also request deletion without opening the App. The steps, including what is deleted, what is kept, and how long a request takes, are on the <a href="delete-account.html">delete account page</a>.</p>
 
   <h2>5. Your Choices</h2>
   <ul>
-    <li>You can use the App offline. Cloud sync does not run while online access is off.</li>
+    <li>You can use the App offline. It keeps the last known access until the device connects again. Cloud sync does not run while the device is offline or while online access is off.</li>
+    <li>A signed-in session ends after 5 minutes with no touch, click, scroll, or keypress. The store data stays on the device. You sign in again to continue. This applies on Android and Windows.</li>
     <li>You can limit ad tracking in your device settings.</li>
     <li>You can delete the account from Settings, or request deletion from the <a href="delete-account.html">delete account page</a>.</li>
     <li>Clearing the App's storage or uninstalling it removes the local database. It does not by itself remove an online copy. Use Delete account or the web page for that.</li>
