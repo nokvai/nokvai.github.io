@@ -1,27 +1,62 @@
 <section id="projects" class="section projects">
   <p class="section-label">Projects</p>
   <h2 class="section-title">Things I've built</h2>
+  <p class="projects__intro">
+    Recent work across store operations, commerce, community apps, and business systems.
+  </p>
 
   <aside class="projects__notice">
-    <h3>Professional Work &amp; Confidentiality</h3>
+    <h3>Private source code</h3>
     <p>
-      Some projects presented in this portfolio were developed for private companies and contain
-      proprietary source code and confidential business information. For confidentiality reasons,
-      I cannot publicly share complete source code or internal company assets. Project descriptions
-      focus on my responsibilities, technical contributions, and the technologies used.
+      Some personal and professional projects have private source code or contain proprietary
+      business information. Descriptions focus on my contributions and the technologies used;
+      public links are included where available.
     </p>
   </aside>
 
-  <h3 class="projects__subheading">Featured projects</h3>
+  <h3 class="projects__subheading">Latest projects</h3>
+  <div class="projects__featured projects__latest">
+    @for (project of latestProjects; track project.name) {
+      <article class="projects__card projects__card--featured">
+        <div class="projects__meta">
+          <time [attr.datetime]="project.updatedAt">{{ project.updatedAt | date: 'MMM yyyy' : 'UTC' }}</time>
+          @if (project.status) {
+            <span class="projects__status">{{ project.status }}</span>
+          }
+        </div>
+        <div class="projects__card-head">
+          <h4>{{ project.name }}</h4>
+          <span class="projects__lang">{{ project.language }}</span>
+        </div>
+        @if (project.confidential) {
+          <span class="projects__confidential">Source code private</span>
+        }
+        <p>{{ project.description }}</p>
+        @if (project.contributions?.length) {
+          <p class="projects__contrib-label">My contribution</p>
+          <ul class="projects__contrib">
+            @for (item of project.contributions; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        }
+        @if (project.url) {
+          <a class="projects__link" [href]="project.url" target="_blank" rel="noopener">{{ project.urlLabel || 'Visit site' }} →</a>
+        }
+      </article>
+    }
+  </div>
+
+  <h3 class="projects__subheading projects__subheading--spaced">Featured professional work</h3>
   <div class="projects__featured">
     @for (project of featuredProjects; track project.name) {
       <article class="projects__card projects__card--featured">
         <div class="projects__card-head">
-          <h3>{{ project.name }}</h3>
+          <h4>{{ project.name }}</h4>
           <span class="projects__lang">{{ project.language }}</span>
         </div>
         @if (project.confidential) {
-          <span class="projects__confidential">Professional Project — Source Code Confidential</span>
+          <span class="projects__confidential">Source code private</span>
         }
         <p>{{ project.description }}</p>
         @if (project.contributions?.length) {
@@ -44,11 +79,11 @@
     @for (project of projects; track project.name) {
       <div class="projects__card">
         <div class="projects__card-head">
-          <h3>{{ project.name }}</h3>
+          <h4>{{ project.name }}</h4>
           <span class="projects__lang">{{ project.language }}</span>
         </div>
         @if (project.confidential) {
-          <span class="projects__confidential">Professional Project — Source Code Confidential</span>
+          <span class="projects__confidential">Source code private</span>
         }
         <p>{{ project.description }}</p>
         @if (project.url) {

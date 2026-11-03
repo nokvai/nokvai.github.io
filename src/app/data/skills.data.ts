@@ -11,7 +11,7 @@ export interface FocusArea {
 export const skills: SkillGroup[] = [
   {
     category: 'Backend & APIs',
-    items: ['C# / .NET Core', 'ASP.NET MVC', 'Node.js', 'Express.js', 'REST APIs', 'Third-party integrations'],
+    items: ['C# / .NET Core', 'ASP.NET MVC', 'Node.js', 'Express.js', 'Fastify', 'REST APIs', 'Third-party integrations'],
   },
   {
     category: 'Frontend',
@@ -19,11 +19,15 @@ export const skills: SkillGroup[] = [
   },
   {
     category: 'Databases',
-    items: ['SQL Server', 'MySQL', 'MongoDB Atlas', 'Document DB'],
+    items: ['SQL Server', 'MySQL', 'PostgreSQL', 'SQLite / Drift', 'MongoDB Atlas', 'Document DB'],
+  },
+  {
+    category: 'Mobile & Desktop',
+    items: ['Flutter', 'Dart', 'Riverpod', 'Flame', 'Offline data & cloud sync'],
   },
   {
     category: 'Tools & Delivery',
-    items: ['Git / GitHub', 'Automated deployments', 'AWS Lambda', 'Elasticsearch', 'Flutter'],
+    items: ['Git / GitHub', 'Automated deployments', 'AWS Lambda', 'Cloudflare Workers / D1 / R2', 'Supabase', 'Appwrite', 'Elasticsearch'],
   },
 ];
 
@@ -43,6 +47,10 @@ export const focusAreas: FocusArea[] = [
   {
     title: 'Frontend Development',
     items: ['Angular', 'React', 'JavaScript / TypeScript'],
+  },
+  {
+    title: 'Mobile & Desktop Apps',
+    items: ['Flutter / Dart', 'Offline business applications', 'Realtime cloud sync'],
   },
   {
     title: 'Software Delivery',

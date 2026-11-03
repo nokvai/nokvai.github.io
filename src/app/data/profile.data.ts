@@ -9,14 +9,14 @@ export const profile = {
   initials: 'BE',
   title: 'Senior Full-Stack Software Developer',
   tagline:
-    'Building business applications, backend APIs, database-driven systems, and modern web solutions.',
-  techLine: ['C# / .NET', 'Node.js', 'React', 'SQL Server', 'REST APIs'],
+    'Building business applications, backend APIs, modern web experiences, and cross-platform mobile and desktop apps.',
+  techLine: ['C# / .NET', 'Node.js', 'React / Vue', 'Flutter', 'SQL'],
   location: 'Davao, Davao Region, Philippines',
   website: 'https://nokvai.github.io',
   email: 'benjaminthethird@gmail.com',
   about: `I am a Full-Stack Software Developer with experience building business applications, backend APIs, database-driven systems, and modern web interfaces. My work includes developing practical solutions for real-world business requirements, integrating third-party services, and contributing across both frontend and backend systems.
 
-My experience includes backend development, API integration, database-driven applications, modern frontend development, and production-focused software delivery. I enjoy solving complex technical problems and taking ownership of features from planning and implementation through deployment and support.`,
+My recent work includes offline store operations, security agency management, commerce, food delivery, and community apps. I build across React and Vue frontends, Node.js APIs, Flutter mobile and desktop clients, and services such as Supabase and Appwrite. I enjoy taking ownership of features from planning and implementation through deployment and support.`,
   social: [
     { label: 'Email', url: 'mailto:benjaminthethird@gmail.com', icon: 'email' },
     { label: 'GitHub', url: 'https://github.com/nokvai', icon: 'github' },

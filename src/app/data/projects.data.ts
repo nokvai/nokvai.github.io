@@ -2,10 +2,119 @@ export interface Project {
   name: string;
   description: string;
   url?: string;
+  urlLabel?: string;
   language: string;
+  updatedAt?: string;
+  status?: string;
   confidential?: boolean;
   contributions?: string[];
 }
+
+export const latestProjects: Project[] = [
+  {
+    name: 'Shady Store Ops',
+    description:
+      'Offline point-of-sale and store operations app for Windows, Android, and iOS, with optional cloud sync.',
+    language: 'Flutter · Dart · SQLite · Supabase',
+    updatedAt: '2026-10-27',
+    confidential: true,
+    contributions: [
+      'Built local sales, inventory, staff access, and optional realtime store sync.',
+      'Added receipt printer setup, cash drawer controls, and order details.',
+      'Built cashier report filters and transaction drill-downs.',
+    ],
+  },
+  {
+    name: 'SecureGuard Pro',
+    description:
+      'Security agency management app for Windows and Android, covering personnel, deployments, attendance, incidents, payroll, and billing.',
+    url: '/secure-guard-pro/downloads.html',
+    urlLabel: 'Downloads & release details',
+    language: 'Flutter · SQLite · Appwrite',
+    updatedAt: '2026-10-22',
+    status: 'Release candidate',
+    confidential: true,
+    contributions: [
+      'Built offline agency records, role-based access, PDF reports, and encrypted backups.',
+      'Integrated installation-bound licensing with online activation and offline validation.',
+      'Published Windows and Android preview packages with release notes and checksums.',
+    ],
+  },
+  {
+    name: 'Meervoorkinderen',
+    description:
+      'Commerce demo with a React storefront, a separate Node.js API, and product and transaction administration.',
+    language: 'React · TypeScript · Fastify · Supabase',
+    updatedAt: '2026-10-13',
+    status: 'Demo',
+    confidential: true,
+    contributions: [
+      'Built the storefront and API with Supabase PostgreSQL, authentication, and storage.',
+      'Implemented admin product and transaction management.',
+    ],
+  },
+  {
+    name: 'Underdog Entertainment',
+    description:
+      'Talent-discovery website where artists submit profiles and visitors browse a curated talent directory.',
+    url: 'https://underdogartists.com',
+    language: 'Vue · TypeScript · Hono · Cloudflare',
+    updatedAt: '2026-10-13',
+    confidential: true,
+    contributions: [
+      'Built the Vue frontend and Cloudflare Worker API with D1 records and R2 image storage.',
+      'Implemented talent submission reviews, featured profiles, and blog publishing workflows.',
+    ],
+  },
+  {
+    name: 'Inato Karinderya',
+    description:
+      'Filipino food marketplace connecting customers, karinderya owners, delivery riders, and administrators.',
+    language: 'Flutter · Dart · Appwrite · OpenStreetMap',
+    updatedAt: '2026-10-01',
+    confidential: true,
+    contributions: [
+      'Built store discovery, menus, ordering, and owner and rider workflows.',
+      'Added delivery tracking, customer location pins, and distance-based delivery fees.',
+    ],
+  },
+  {
+    name: 'PetWorld Society',
+    description:
+      'Social virtual-pet game combining a 2D world with nearby pet mapping and community features.',
+    language: 'Flutter · Flame · Supabase',
+    updatedAt: '2026-10-01',
+    confidential: true,
+    contributions: [
+      'Built virtual-pet gameplay, nearby pet maps, marketplace features, and certificates.',
+      'Added map social chat, refreshed world artwork, and improved online presence.',
+    ],
+  },
+  {
+    name: 'Metal Profiler',
+    description:
+      'Social app for the metal music community, with musician profiles, music links, verification, feeds, and messaging.',
+    language: 'Flutter · Dart · Supabase',
+    updatedAt: '2026-09-26',
+    confidential: true,
+    contributions: [
+      'Built profiles, verification workflows, community feeds, and direct messaging.',
+      'Added realtime feed and chat updates, online presence, genre themes, and offline handling.',
+    ],
+  },
+  {
+    name: 'Bio Free DTR',
+    description:
+      'Employee attendance app with GPS-recorded time punches and a Google Apps Script and Google Sheets backend.',
+    language: 'Flutter · Apps Script · Google Sheets',
+    updatedAt: '2026-09-07',
+    confidential: true,
+    contributions: [
+      'Built branch-based employee and admin access with backend-generated attendance timestamps.',
+      'Added multiple daily time punches, pay estimates, and mapped attendance addresses.',
+    ],
+  },
+];
 
 export const featuredProjects: Project[] = [
   {
@@ -68,6 +177,13 @@ export const featuredProjects: Project[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    name: 'PickleRef AI',
+    description:
+      'Pickleball referee prototype with camera-based court calibration, player and ball tracking, scoring, voice feedback, and a field-testing toolkit.',
+    language: 'Flutter · Dart · ML Kit',
+    confidential: true,
+  },
   {
     name: 'TheVoiceSoundsFamiliar',
     description: 'Android game, "The Voice Sounds Familiar" — thesis project (SKSU).',
@@ -134,26 +250,8 @@ export const projects: Project[] = [
     confidential: true,
   },
   {
-    name: 'metal-profiler',
-    description: 'Flutter app for the metal music community — profiles, music links, verification and social.',
-    language: 'Flutter · Dart',
-    confidential: true,
-  },
-  {
-    name: 'petworld_society',
-    description: 'Flutter app for the Petworld Society community.',
-    language: 'Flutter · Dart',
-    confidential: true,
-  },
-  {
     name: 'neon_munch',
     description: 'Flutter mobile app.',
-    language: 'Flutter · Dart',
-    confidential: true,
-  },
-  {
-    name: 'biofreedtr',
-    description: 'Bio Free DTR — Flutter employee attendance app with a Google Apps Script + Google Sheets backend.',
     language: 'Flutter · Dart',
     confidential: true,
   },
